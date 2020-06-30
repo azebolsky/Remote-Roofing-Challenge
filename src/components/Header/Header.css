@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: blue;
+  color: white;
+}
+
+.sub-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  background-color: darkslategray;
+  color: white;
+  font-size: 15px;
+}
+
+.nav > h1,
+.sub-nav > h1 {
+  padding-left: 50px;
+}
+
+.nav > div {
+  padding-right: 50px;
+}
+
+a {
+  margin: 20px;
+}
