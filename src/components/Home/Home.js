@@ -2,11 +2,11 @@ import React from "react";
 import Movies from "../Movies/Movies";
 import Series from "../Series/Series";
 
-const home = (props) => {
+const home = ({ movieItems }) => {
   return (
     <div>
       <h1>Home Page</h1>
-      <Movies />
+      <Movies movieItems={movieItems} />
       <Series />
     </div>
   );

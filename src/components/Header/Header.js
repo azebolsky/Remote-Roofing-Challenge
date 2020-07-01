@@ -7,8 +7,11 @@ const header = () => {
       <nav className="nav">
         <h1>DEMO Streaming</h1>
         <div>
-          <a>Log in</a>
-          <a> Start your free trial</a>
+          <a href="#">Log in</a>
+          <a href="#" className="free-trial">
+            {" "}
+            Start your free trial
+          </a>
         </div>
       </nav>
       <nav className="sub-nav">
