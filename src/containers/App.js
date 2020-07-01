@@ -26,18 +26,10 @@ function App() {
         let movieBlocks = [];
         let seriesBlocks = [];
         movieSeriesItems.entries.map((i) => {
-          if (
-            i.programType === "movie" &&
-            i.releaseYear >= 2010 &&
-            movieBlocks.length !== 21
-          ) {
+          if (i.programType === "movie" && i.releaseYear >= 2010) {
             movieBlocks.push(i);
           }
-          if (
-            i.programType === "series" &&
-            i.releaseYear >= 2010 &&
-            seriesBlocks.length !== 21
-          ) {
+          if (i.programType === "series" && i.releaseYear >= 2010) {
             seriesBlocks.push(i);
           }
         });

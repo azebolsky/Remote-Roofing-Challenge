@@ -1,13 +1,23 @@
 import React from "react";
+import "./Movies.css";
 
 const movies = ({ movieItems }) => {
   console.log(movieItems.length);
   return (
-    <div>
-      <h1>Movies Page</h1>
-      {/* {movieItems.map((item) => {
-        console.log(item.programType);
-      })} */}
+    <div className="movie-container">
+      {movieItems.map((item) => {
+        return (
+          <div className="movie">
+            <img
+              src={item.images["Poster Art"].url}
+              alt="movie"
+              height="200px"
+              width="150px"
+            />
+            <p className="movie-title">{item.title}</p>
+          </div>
+        );
+      })}
     </div>
   );
 };
