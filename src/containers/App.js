@@ -4,7 +4,6 @@ import Movies from "../components/Movies/Movies";
 import Series from "../components/Series/Series";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import Home from "../components/Home/Home";
 import "./App.css";
 
 const App = () => {
@@ -60,26 +59,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header currentSubtitle={sub.subtitle} />
-      {!item.loading ? (
-        <>
-          <Home
-            movieItems={item.movies}
-            seriesItems={item.series}
-            currentSubtitle={sub.subtitle}
-            // handleLinkClick={handleLinkClick}
-          />
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <Home
-                movieItems={item.movies}
-                seriesItems={item.series}
-                subtitle={item.subtitle}
-              />
-            )}
-          />
+      <Header
+        currentSubtitle={sub.subtitle}
+        handleLinkClick={handleLinkClick}
+      />
+      {!item.loading || !item.error ? (
+        <div className="content">
           <Route
             path="/movies"
             render={() => <Movies movieItems={item.movies} />}
@@ -104,9 +89,9 @@ const App = () => {
               Movies
             </Link>
           </div>
-        </>
+        </div>
       ) : (
-        <h1>loading...</h1>
+        <h1>{item.loading ? "...loading" : "Something went wrong"}</h1>
       )}
       <Footer />
     </div>

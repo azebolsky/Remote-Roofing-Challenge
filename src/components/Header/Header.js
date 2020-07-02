@@ -6,12 +6,14 @@ const header = (props) => {
   return (
     <div>
       <nav className="nav">
-        <Link to="/">DEMO Streaming</Link>
-        <div>
-          <a href="/">Log in</a>
-          <a href="/" className="free-trial">
+        <Link to="/" onClick={() => props.handleLinkClick("Titles")}>
+          <h1>DEMO Streaming</h1>
+        </Link>
+        <div className="right-nav">
+          <Link to="/">Log in</Link>
+          <Link to="/" className="free-trial">
             Start your free trial
-          </a>
+          </Link>
         </div>
       </nav>
       <nav className="sub-nav">

@@ -7,6 +7,19 @@
   color: white;
 }
 
+.right-nav {
+  padding-right: 50px;
+}
+
+@media (max-width: 800px) {
+  .right-nav > :link {
+    font-size: 10px;
+  }
+  h1 {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 500px) {
   .nav {
     display: flex;
@@ -17,13 +30,20 @@
     color: white;
   }
 
-  a {
-    font-size: 8px;
-    margin: 5px;
+  .right-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5px;
   }
 
+  .right-nav > :link {
+    margin: 5px;
+    font-size: 8px;
+  }
   .free-trial {
-    padding: 5px;
+    padding: 10px;
   }
 }
 
@@ -36,18 +56,15 @@
   font-size: 15px;
 }
 
-.nav > h1,
+.nav > a > h1,
 .sub-nav > h1 {
   padding-left: 50px;
 }
 
-.nav > div {
-  padding-right: 50px;
-}
-
-a {
+a,
+:link {
   margin: 20px;
-  font-size: 15px;
+  font-size: 20px;
   text-decoration: none;
   color: white;
 }
