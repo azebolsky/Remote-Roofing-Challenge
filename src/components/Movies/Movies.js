@@ -5,9 +5,9 @@ const movies = ({ movieItems }) => {
   console.log(movieItems.length);
   return (
     <div className="movie-container">
-      {movieItems.map((item) => {
+      {movieItems.map((item, idx) => {
         return (
-          <div className="movie">
+          <div className="movie" key={idx}>
             <img
               src={item.images["Poster Art"].url}
               alt="movie"

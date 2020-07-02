@@ -1,17 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const header = () => {
   return (
     <div>
       <nav className="nav">
-        <h1>DEMO Streaming</h1>
+        <Link to="/">DEMO Streaming</Link>
         <div>
-          <a href="#">Log in</a>
+          {/* <a href="#">Log in</a>
           <a href="#" className="free-trial">
             {" "}
             Start your free trial
-          </a>
+          </a> */}
         </div>
       </nav>
       <nav className="sub-nav">

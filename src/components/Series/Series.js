@@ -4,9 +4,9 @@ import "./Series.css";
 const series = ({ seriesItems }) => {
   return (
     <div className="series-container">
-      {seriesItems.map((item) => {
+      {seriesItems.map((item, idx) => {
         return (
-          <div className="series">
+          <div className="series" key={idx}>
             <img
               src={item.images["Poster Art"].url}
               alt="series"

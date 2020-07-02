@@ -1,4 +1,10 @@
 .home {
-  color: black;
-  background-color: red;
+  display: flex;
+  flex-direction: row;
+}
+
+.links {
+  color: white;
+  background-color: black;
+  padding: 50px 20px;
 }
