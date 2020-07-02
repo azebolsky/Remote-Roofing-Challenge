@@ -2,9 +2,18 @@ import React from "react";
 import "./Series.css";
 
 const series = ({ seriesItems }) => {
+  const collator = new Intl.Collator("en", {
+    numeric: true,
+    sensitivity: "base",
+  });
+
+  const newSeriesItems = seriesItems.sort((a, b) =>
+    collator.compare(a.title, b.title)
+  );
+
   return (
     <div className="series-container">
-      {seriesItems.map((item, idx) => {
+      {newSeriesItems.slice(0, 21).map((item, idx) => {
         return (
           <div className="series" key={idx}>
             <img

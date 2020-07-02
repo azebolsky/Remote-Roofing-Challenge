@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import Movies from "../components/Movies/Movies";
 import Series from "../components/Series/Series";
 import Header from "../components/Header/Header";
@@ -7,12 +7,15 @@ import Footer from "../components/Footer/Footer";
 import Home from "../components/Home/Home";
 import "./App.css";
 
-function App() {
+const App = () => {
   const [item, setItem] = useState({
     movies: [],
     series: [],
     loading: true,
     error: false,
+  });
+  const [sub, setSub] = useState({
+    subtitle: "Titles",
   });
 
   // fetch json data using useEffect with an empty array as the second arg so this only runs once
@@ -39,35 +42,75 @@ function App() {
         return setItem({
           movies: [...movieBlocks],
           series: [...seriesBlocks],
+          loading: false,
+        });
+      })
+      .catch((error) => {
+        setItem({
+          error: true,
         });
       });
   }, []);
 
+  const handleLinkClick = (type) => {
+    setSub({
+      subtitle: type,
+    });
+  };
+
   return (
     <div className="App">
-      <Header />
-      <Home movieItems={item.movies} seriesItems={item.series} />
-      <Switch>
-        <Route
-          path="/movies"
-          render={() => <Movies movieItems={item.movies} />}
-        />
-        <Route
-          path="/series"
-          render={() => <Series seriesItems={item.series} />}
-        />
-      </Switch>
-      <div className="home">
-        <Link className="links" to="/series">
-          Series
-        </Link>
-        <Link className="links" to="/movies">
-          Movies
-        </Link>
-      </div>
+      <Header currentSubtitle={sub.subtitle} />
+      {!item.loading ? (
+        <>
+          <Home
+            movieItems={item.movies}
+            seriesItems={item.series}
+            currentSubtitle={sub.subtitle}
+            // handleLinkClick={handleLinkClick}
+          />
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Home
+                movieItems={item.movies}
+                seriesItems={item.series}
+                subtitle={item.subtitle}
+              />
+            )}
+          />
+          <Route
+            path="/movies"
+            render={() => <Movies movieItems={item.movies} />}
+          />
+          <Route
+            path="/series"
+            render={() => <Series seriesItems={item.series} />}
+          />
+          <div className="home">
+            <Link
+              className="links"
+              to="/series"
+              onClick={() => handleLinkClick("Series")}
+            >
+              Series
+            </Link>
+            <Link
+              className="links"
+              to="/movies"
+              onClick={() => handleLinkClick("Movies")}
+            >
+              Movies
+            </Link>
+          </div>
+        </>
+      ) : (
+        <h1>loading...</h1>
+      )}
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
