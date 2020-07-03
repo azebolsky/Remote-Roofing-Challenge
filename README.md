@@ -2,6 +2,10 @@
 
 For this application, you can view a list of movies and another list of series. View a high quality image for each title.
 
+## Get started by clicking the link below:
+
+[Movies-and-Series](https://azebolsky.github.io/)
+
 ## Technologies Used:
 
 - React
