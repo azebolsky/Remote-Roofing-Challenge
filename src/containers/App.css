@@ -10,6 +10,7 @@
   background: url("https://i.imgur.com/AR76C70.jpg") no-repeat center center
     fixed;
   background-size: cover;
+  padding-top: 20px;
 }
 
 .home {
@@ -20,5 +21,6 @@
 .links {
   color: white;
   background-color: black;
-  padding: 50px 20px;
+  padding: 80px 50px;
+  /* display: none; */
 }
