@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Remote Roofing Challenge
 
-## Available Scripts
+For this application, you can view a list of movies and another list of series. View a high quality image for each title.
 
-In the project directory, you can run:
+## Technologies Used:
 
-### `npm start`
+- React
+- JavaScript
+- CSS
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How did you decide on the technical and architectural choices used as part of your solution?
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+I broke down the home, series, and movies page and found out what was necessary to create each. I decided to use the app.js as the home page since it made more sense to prevent too many components.
 
-### `npm test`
+To retrieve the json feed, I used a fetch request in the useEffect() hook so that I could update when the page loads the first time. I passed an empty array as a second argument for the useEffect() so the effect runs and cleans only once. I also updated the state with the useEffect() fetch request as this was the most efficient way I found.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I used react hooks because I've mostly used class based components in my experience and I've been wanting to branch out more to hooks as they are the most efficient way to work with state in react.
 
-### `npm run build`
+## Are there any improvements you could make to your submission?
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I could absolutely make some improvements. The Links used for the Movies and Series page remain when you're on the Movies or Series page. I ended up liking it so a user can switch to one or the other when they scroll to the bottom of the page.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+I believe there is so much more I could do with styling to make the app look more pleasing.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## What would you do differently if you were allocated more time?
 
-### `npm run eject`
+With more time, I would redesign the app to make it more functional. Add more to the navbar so users can easily move between one page to another along with having an active status on the page you're currently on.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+I would also add in a login and signup page so that users can create an account to see more information and possibly save their favorite movies or series.
