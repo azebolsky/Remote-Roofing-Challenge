@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Remote-Roofing-Challenge/static/css/main.445ae69b.chunk.css",
+    "main.js": "/Remote-Roofing-Challenge/static/js/main.25bb3e96.chunk.js",
+    "main.js.map": "/Remote-Roofing-Challenge/static/js/main.25bb3e96.chunk.js.map",
+    "runtime-main.js": "/Remote-Roofing-Challenge/static/js/runtime-main.3eb4e925.js",
+    "runtime-main.js.map": "/Remote-Roofing-Challenge/static/js/runtime-main.3eb4e925.js.map",
+    "static/js/2.d66d9d08.chunk.js": "/Remote-Roofing-Challenge/static/js/2.d66d9d08.chunk.js",
+    "static/js/2.d66d9d08.chunk.js.map": "/Remote-Roofing-Challenge/static/js/2.d66d9d08.chunk.js.map",
+    "index.html": "/Remote-Roofing-Challenge/index.html",
+    "precache-manifest.63cc37c222e1dfc86482a9a23a748a2d.js": "/Remote-Roofing-Challenge/precache-manifest.63cc37c222e1dfc86482a9a23a748a2d.js",
+    "service-worker.js": "/Remote-Roofing-Challenge/service-worker.js",
+    "static/css/main.445ae69b.chunk.css.map": "/Remote-Roofing-Challenge/static/css/main.445ae69b.chunk.css.map",
+    "static/js/2.d66d9d08.chunk.js.LICENSE.txt": "/Remote-Roofing-Challenge/static/js/2.d66d9d08.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3eb4e925.js",
+    "static/js/2.d66d9d08.chunk.js",
+    "static/css/main.445ae69b.chunk.css",
+    "static/js/main.25bb3e96.chunk.js"
+  ]
+}
