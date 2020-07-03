@@ -7,6 +7,9 @@
 
 .content {
   min-height: 60%;
+  background: url("https://i.imgur.com/AR76C70.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
 }
 
 .home {
