@@ -4,7 +4,7 @@ For this application, you can view a list of movies and another list of series. 
 
 ## Get started by clicking the link below:
 
-[Movies-and-Series](https://azebolsky.github.io/)
+[Movies-and-Series](https://azebolsky.github.io/Remote-Roofing-Challenge)
 
 ## Technologies Used:
 
